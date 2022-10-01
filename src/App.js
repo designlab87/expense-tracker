@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from "./components/Expenses/Expenses";
-import ExpenseControl from './components/NewExpense/ExpenseControl';
 
 const DUMMY_EXPENSES = [
   { id: 'e1', title: 'Toilet Paper',      amount: 94.12,  date: new Date(2020, 7, 14), },
@@ -13,7 +12,6 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-  const [showForm, setShowForm] = useState(false);
 
   const addExpenseHandler = expense => {
     setExpenses(prevExpenses =>{
@@ -24,22 +22,12 @@ const App = () => {
     });
   };
 
-  const showNewExpenseFormHandler = showState => {
-    setShowForm(showState);
-  }
-
   return (
     <div>
-      {showForm ? 
-        <NewExpense 
-          items={expenses} 
-          onAddExpense={addExpenseHandler} 
-          onShowNewExpenseForm={showNewExpenseFormHandler} 
-        /> : 
-        <ExpenseControl 
-          onShowNewExpenseForm={showNewExpenseFormHandler} 
-        />
-      }
+      <NewExpense 
+        items={expenses} 
+        onAddExpense={addExpenseHandler} 
+      />
       <Expenses items={expenses}/>
     </div>
   );
