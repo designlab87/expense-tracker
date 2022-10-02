@@ -20,5 +20,6 @@
   font: inherit;
   padding: 0.5rem 3rem;
   font-weight: bold;
-  border-radius: 6px;
+  border:none;
+  border-radius: 0px;
 }
