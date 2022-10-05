@@ -1,5 +1,5 @@
 .new-expense {
-  background-color: #9a9a9a;
+  background-color: #a2bf2d;
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;
@@ -12,14 +12,18 @@
   cursor: pointer;
   padding: 1rem 2rem;
   border: 1px solid #fff;
-  background-color: #2a2a2a;
+  background-color: #211d41;
   color: white;
-  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.new-expense button:nth-child(2) {
+  margin-left: 10px;
 }
 
 .new-expense button:hover,
 .new-expense button:active {
-  background-color: #6f6f6f;
+  background-color: #3d3678;
   border-color: #fff;
 }
 
