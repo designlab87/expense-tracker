@@ -1,2 +1,2 @@
 # expense-tracker
-A lightweight tracker built with React
+A lightweight expense tracker UI built with React
